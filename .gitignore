@@ -1,18 +1,28 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# App artifacts
+/_build
+/db
+/deps
+/*.ez
+/.elixir_ls
 
-# Other files and folders
-.settings/
+# Generated on crash by the VM
+erl_crash.dump
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Generated on crash by NPM
+npm-debug.log
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Static artifacts
+/assets/node_modules
+
+# Since we are building assets from assets/,
+# we ignore priv/static. You may want to comment
+# this depending on your deployment strategy.
+/priv/static/
+
+# Files matching config/*.secret.exs pattern contain sensitive
+# data and you should not commit them into version control.
+#
+# Alternatively, you may comment the line below and commit the
+# secrets files as long as you replace their contents by environment
+# variables.
+/config/*.secret.exs
